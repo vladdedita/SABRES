@@ -1,0 +1,2721 @@
+{
+  "contractName": "POCAccessLogger",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_user",
+          "type": "string"
+        },
+        {
+          "name": "_accessTime",
+          "type": "uint256"
+        }
+      ],
+      "name": "set",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_user",
+          "type": "string"
+        }
+      ],
+      "name": "getAll",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_user",
+          "type": "string"
+        }
+      ],
+      "name": "getLast",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.1+commit.c8a2cb62\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"_user\",\"type\":\"string\"}],\"name\":\"getAll\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_user\",\"type\":\"string\"}],\"name\":\"getLast\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_user\",\"type\":\"string\"},{\"name\":\"_accessTime\",\"type\":\"uint256\"}],\"name\":\"set\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Stuff/Projects/Master/client/src/main/ui/contracts/POCAccessLogger.sol\":\"POCAccessLogger\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Stuff/Projects/Master/client/src/main/ui/contracts/POCAccessLogger.sol\":{\"keccak256\":\"0x7d9f7fae8184294cd4f31a58b52ea77fcacf1c855acb9b3b71a6f05f15d9e15b\",\"urls\":[\"bzzr://b6dad4e557a92c072a1589b457466463b4027cc476eae808950a3abfe8d88aa4\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061071f806100206000396000f3fe608060405260043610610051576000357c01000000000000000000000000000000000000000000000000000000009004806304ea6bb914610056578063420dd15a146100935780638a42ebe9146100d0575b600080fd5b34801561006257600080fd5b5061007d60048036036100789190810190610508565b6100f9565b60405161008a9190610607565b60405180910390f35b34801561009f57600080fd5b506100ba60048036036100b59190810190610508565b6102d5565b6040516100c79190610629565b60405180910390f35b3480156100dc57600080fd5b506100f760048036036100f29190810190610549565b6103d8565b005b6060806000836040518082805190602001908083835b602083101515610134578051825260208201915060208101905060208303925061010f565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020805490506040519080825280602002602001820160405280156101995781602001602082028038833980820191505090505b50905060008090505b6000846040518082805190602001908083835b6020831015156101da57805182526020820191506020810190506020830392506101b5565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020805490508110156102cb576000846040518082805190602001908083835b602083101515610250578051825260208201915060208101905060208303925061022b565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390208181548110151561029057fe5b90600052602060002090600202016001015482828151811015156102b057fe5b906020019060200201818152505080806001019150506101a2565b5080915050919050565b600080826040518082805190602001908083835b60208310151561030e57805182526020820191506020810190506020830392506102e9565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060016000846040518082805190602001908083835b60208310151561037b5780518252602082019150602081019050602083039250610356565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902080549050038154811015156103bf57fe5b9060005260206000209060020201600101549050919050565b6000826040518082805190602001908083835b60208310151561041057805182526020820191506020810190506020830392506103eb565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206040805190810160405280428152602001838152509080600181540180825580915050906001820390600052602060002090600202016000909192909190915060008201518160000155602082015181600101555050505050565b600082601f83011215156104b157600080fd5b81356104c46104bf82610671565b610644565b915080825260208301602083018583830111156104e057600080fd5b6104eb8382846106d6565b50505092915050565b600061050082356106cc565b905092915050565b60006020828403121561051a57600080fd5b600082013567ffffffffffffffff81111561053457600080fd5b6105408482850161049e565b91505092915050565b6000806040838503121561055c57600080fd5b600083013567ffffffffffffffff81111561057657600080fd5b6105828582860161049e565b9250506020610593858286016104f4565b9150509250929050565b60006105a8826106aa565b8084526020840193506105ba8361069d565b60005b828110156105ec576105d08683516105f8565b6105d9826106b5565b91506020860195506001810190506105bd565b50849250505092915050565b610601816106c2565b82525050565b60006020820190508181036000830152610621818461059d565b905092915050565b600060208201905061063e60008301846105f8565b92915050565b6000604051905081810181811067ffffffffffffffff8211171561066757600080fd5b8060405250919050565b600067ffffffffffffffff82111561068857600080fd5b601f19601f8301169050602081019050919050565b6000602082019050919050565b600081519050919050565b6000602082019050919050565b6000819050919050565b6000819050919050565b8281833760008383015250505056fea265627a7a72305820ba2486f38a6af2c09e307278c6d9319cd7983f2f2558b7417d353924a79512476c6578706572696d656e74616cf50037",
+  "deployedBytecode": "0x608060405260043610610051576000357c01000000000000000000000000000000000000000000000000000000009004806304ea6bb914610056578063420dd15a146100935780638a42ebe9146100d0575b600080fd5b34801561006257600080fd5b5061007d60048036036100789190810190610508565b6100f9565b60405161008a9190610607565b60405180910390f35b34801561009f57600080fd5b506100ba60048036036100b59190810190610508565b6102d5565b6040516100c79190610629565b60405180910390f35b3480156100dc57600080fd5b506100f760048036036100f29190810190610549565b6103d8565b005b6060806000836040518082805190602001908083835b602083101515610134578051825260208201915060208101905060208303925061010f565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020805490506040519080825280602002602001820160405280156101995781602001602082028038833980820191505090505b50905060008090505b6000846040518082805190602001908083835b6020831015156101da57805182526020820191506020810190506020830392506101b5565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020805490508110156102cb576000846040518082805190602001908083835b602083101515610250578051825260208201915060208101905060208303925061022b565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390208181548110151561029057fe5b90600052602060002090600202016001015482828151811015156102b057fe5b906020019060200201818152505080806001019150506101a2565b5080915050919050565b600080826040518082805190602001908083835b60208310151561030e57805182526020820191506020810190506020830392506102e9565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060016000846040518082805190602001908083835b60208310151561037b5780518252602082019150602081019050602083039250610356565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902080549050038154811015156103bf57fe5b9060005260206000209060020201600101549050919050565b6000826040518082805190602001908083835b60208310151561041057805182526020820191506020810190506020830392506103eb565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206040805190810160405280428152602001838152509080600181540180825580915050906001820390600052602060002090600202016000909192909190915060008201518160000155602082015181600101555050505050565b600082601f83011215156104b157600080fd5b81356104c46104bf82610671565b610644565b915080825260208301602083018583830111156104e057600080fd5b6104eb8382846106d6565b50505092915050565b600061050082356106cc565b905092915050565b60006020828403121561051a57600080fd5b600082013567ffffffffffffffff81111561053457600080fd5b6105408482850161049e565b91505092915050565b6000806040838503121561055c57600080fd5b600083013567ffffffffffffffff81111561057657600080fd5b6105828582860161049e565b9250506020610593858286016104f4565b9150509250929050565b60006105a8826106aa565b8084526020840193506105ba8361069d565b60005b828110156105ec576105d08683516105f8565b6105d9826106b5565b91506020860195506001810190506105bd565b50849250505092915050565b610601816106c2565b82525050565b60006020820190508181036000830152610621818461059d565b905092915050565b600060208201905061063e60008301846105f8565b92915050565b6000604051905081810181811067ffffffffffffffff8211171561066757600080fd5b8060405250919050565b600067ffffffffffffffff82111561068857600080fd5b601f19601f8301169050602081019050919050565b6000602082019050919050565b600081519050919050565b6000602082019050919050565b6000819050919050565b6000819050919050565b8281833760008383015250505056fea265627a7a72305820ba2486f38a6af2c09e307278c6d9319cd7983f2f2558b7417d353924a79512476c6578706572696d656e74616cf50037",
+  "sourceMap": "73:971:4:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;73:971:4;;;;;;;",
+  "deployedSourceMap": "73:971:4:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;576:309;;8:9:-1;5:2;;;30:1;27;20:12;5:2;576:309:4;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;897:144;;8:9:-1;5:2;;;30:1;27;20:12;5:2;897:144:4;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;336:232;;8:9:-1;5:2;;;30:1;27;20:12;5:2;336:232:4;;;;;;;;;;;;;;;;:::i;:::-;;576:309;634:13;659:25;698:9;708:5;698:16;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;51:19;36:153;;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;698:16:4;;;;;;;;;;;;;;;;;;;;;:23;;;;687:35;;;;;;;;;;;;;;;;;;;;;;29:2:-1;21:6;17:15;117:4;105:10;97:6;88:34;148:4;140:6;136:17;126:27;;0:157;687:35:4;;;;659:63;;739:6;748:1;739:10;;735:111;753:9;763:5;753:16;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;51:19;36:153;;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;753:16:4;;;;;;;;;;;;;;;;;;;;;:23;;;;751:1;:25;735:111;;;815:9;825:5;815:16;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;51:19;36:153;;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;815:16:4;;;;;;;;;;;;;;;;;;;;;832:1;815:19;;;;;;;;;;;;;;;;;;;;:30;;;797:11;809:1;797:14;;;;;;;;;;;;;;;;;:49;;;;;778:3;;;;;;;735:111;;;;866:11;859:18;;;576:309;;;:::o;897:144::-;956:4;979:9;989:5;979:16;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;51:19;36:153;;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;979:16:4;;;;;;;;;;;;;;;;;;;;;1020:1;996:9;1006:5;996:16;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;51:19;36:153;;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;996:16:4;;;;;;;;;;;;;;;;;;;;;:23;;;;:25;979:43;;;;;;;;;;;;;;;;;;;;:54;;;972:61;;897:144;;;:::o;336:232::-;409:9;419:5;409:16;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;51:19;36:153;;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;409:16:4;;;;;;;;;;;;;;;;;;;;;431:91;;;;;;;;;469:3;431:91;;;;499:11;431:91;;;409:114;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;409:114:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;336:232;;:::o;6:442:-1:-;;108:3;101:4;93:6;89:17;85:27;78:35;75:2;;;126:1;123;116:12;75:2;163:6;150:20;185:65;200:49;242:6;200:49;;;185:65;;;176:74;;270:6;263:5;256:21;306:4;298:6;294:17;339:4;332:5;328:16;374:3;365:6;360:3;356:16;353:25;350:2;;;391:1;388;381:12;350:2;401:41;435:6;430:3;425;401:41;;;68:380;;;;;;;;456:118;;523:46;561:6;548:20;523:46;;;514:55;;508:66;;;;;581:347;;695:2;683:9;674:7;670:23;666:32;663:2;;;711:1;708;701:12;663:2;774:1;763:9;759:17;746:31;797:18;789:6;786:30;783:2;;;829:1;826;819:12;783:2;849:63;904:7;895:6;884:9;880:22;849:63;;;839:73;;725:193;657:271;;;;;935:472;;;1066:2;1054:9;1045:7;1041:23;1037:32;1034:2;;;1082:1;1079;1072:12;1034:2;1145:1;1134:9;1130:17;1117:31;1168:18;1160:6;1157:30;1154:2;;;1200:1;1197;1190:12;1154:2;1220:63;1275:7;1266:6;1255:9;1251:22;1220:63;;;1210:73;;1096:193;1320:2;1338:53;1383:7;1374:6;1363:9;1359:22;1338:53;;;1328:63;;1299:98;1028:379;;;;;;1445:590;;1580:54;1628:5;1580:54;;;1652:6;1647:3;1640:19;1676:4;1671:3;1667:14;1660:21;;1721:56;1771:5;1721:56;;;1798:1;1783:230;1808:6;1805:1;1802:13;1783:230;;;1848:53;1897:3;1888:6;1882:13;1848:53;;;1918:60;1971:6;1918:60;;;1908:70;;2001:4;1996:3;1992:14;1985:21;;1830:1;1827;1823:9;1818:14;;1783:230;;;1787:14;2026:3;2019:10;;1559:476;;;;;;;2043:110;2116:31;2141:5;2116:31;;;2111:3;2104:44;2098:55;;;2160:341;;2318:2;2307:9;2303:18;2295:26;;2368:9;2362:4;2358:20;2354:1;2343:9;2339:17;2332:47;2393:98;2486:4;2477:6;2393:98;;;2385:106;;2289:212;;;;;2508:193;;2616:2;2605:9;2601:18;2593:26;;2630:61;2688:1;2677:9;2673:17;2664:6;2630:61;;;2587:114;;;;;2708:256;;2770:2;2764:9;2754:19;;2808:4;2800:6;2796:17;2907:6;2895:10;2892:22;2871:18;2859:10;2856:34;2853:62;2850:2;;;2928:1;2925;2918:12;2850:2;2948:10;2944:2;2937:22;2748:216;;;;;2971:259;;3115:18;3107:6;3104:30;3101:2;;;3147:1;3144;3137:12;3101:2;3191:4;3187:9;3180:4;3172:6;3168:17;3164:33;3156:41;;3220:4;3214;3210:15;3202:23;;3038:192;;;;3239:121;;3348:4;3340:6;3336:17;3325:28;;3317:43;;;;3369:107;;3465:5;3459:12;3449:22;;3443:33;;;;3484:122;;3595:4;3587:6;3583:17;3572:28;;3565:41;;;;3614:79;;3683:5;3672:16;;3666:27;;;;3700:79;;3769:5;3758:16;;3752:27;;;;3787:145;3868:6;3863:3;3858;3845:30;3924:1;3915:6;3910:3;3906:16;3899:27;3838:94;;;",
+  "source": "pragma solidity >=0.4.21 < 0.7.0;\r\npragma experimental ABIEncoderV2; \r\n\r\ncontract POCAccessLogger {\r\n\r\n    struct AccessTime {\r\n        uint256 miningTime;\r\n        uint256 accessTime;\r\n    }\r\n    \r\n    mapping(string => AccessTime[]) accessLog; //map to hold last user's access time\r\n    mapping(string => uint) accessLogCount;\r\n\r\n    function set(string memory _user, uint256 _accessTime) public {\r\n        accessLog[_user].push(AccessTime({\r\n            miningTime: now,\r\n            accessTime: _accessTime\r\n        }));\r\n        // accessLogCount[_user]++;\r\n    }\r\n\r\n    function getAll(string memory _user) public view returns (uint[] memory){\r\n        uint[] memory accessTimes = new uint[](accessLog[_user].length);\r\n\r\n        for(uint i = 0; i<accessLog[_user].length; i++) \r\n            accessTimes[i] = (accessLog[_user][i].accessTime);\r\n\r\n        return accessTimes;\r\n    }\r\n    \r\n    function getLast(string memory _user) public view returns (uint){\r\n        return accessLog[_user][accessLog[_user].length-1].accessTime;\r\n    }\r\n} ",
+  "sourcePath": "C:\\Stuff\\Projects\\Master\\client\\src\\main\\ui\\contracts\\POCAccessLogger.sol",
+  "ast": {
+    "absolutePath": "/C/Stuff/Projects/Master/client/src/main/ui/contracts/POCAccessLogger.sol",
+    "exportedSymbols": {
+      "POCAccessLogger": [
+        700
+      ]
+    },
+    "id": 701,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 596,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:4"
+      },
+      {
+        "id": 597,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:33:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 700,
+        "linearizedBaseContracts": [
+          700
+        ],
+        "name": "POCAccessLogger",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "POCAccessLogger.AccessTime",
+            "id": 602,
+            "members": [
+              {
+                "constant": false,
+                "id": 599,
+                "name": "miningTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 602,
+                "src": "136:18:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 598,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "136:7:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 601,
+                "name": "accessTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 602,
+                "src": "165:18:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 600,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "165:7:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "AccessTime",
+            "nodeType": "StructDefinition",
+            "scope": 700,
+            "src": "107:84:4",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 607,
+            "name": "accessLog",
+            "nodeType": "VariableDeclaration",
+            "scope": 700,
+            "src": "203:41:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_$",
+              "typeString": "mapping(string => struct POCAccessLogger.AccessTime[])"
+            },
+            "typeName": {
+              "id": 606,
+              "keyType": {
+                "id": 603,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "211:6:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "203:31:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_$",
+                "typeString": "mapping(string => struct POCAccessLogger.AccessTime[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "contractScope": null,
+                  "id": 604,
+                  "name": "AccessTime",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 602,
+                  "src": "221:10:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_AccessTime_$602_storage_ptr",
+                    "typeString": "struct POCAccessLogger.AccessTime"
+                  }
+                },
+                "id": 605,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "221:12:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_ptr",
+                  "typeString": "struct POCAccessLogger.AccessTime[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 611,
+            "name": "accessLogCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 700,
+            "src": "289:38:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_uint256_$",
+              "typeString": "mapping(string => uint256)"
+            },
+            "typeName": {
+              "id": 610,
+              "keyType": {
+                "id": 608,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "297:6:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "289:23:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_uint256_$",
+                "typeString": "mapping(string => uint256)"
+              },
+              "valueType": {
+                "id": 609,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "307:4:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 628,
+              "nodeType": "Block",
+              "src": "398:170:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 623,
+                            "name": "now",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 717,
+                            "src": "469:3:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "id": 624,
+                            "name": "_accessTime",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 615,
+                            "src": "499:11:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 622,
+                          "name": "AccessTime",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 602,
+                          "src": "431:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_AccessTime_$602_storage_ptr_$",
+                            "typeString": "type(struct POCAccessLogger.AccessTime storage pointer)"
+                          }
+                        },
+                        "id": 625,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [
+                          "miningTime",
+                          "accessTime"
+                        ],
+                        "nodeType": "FunctionCall",
+                        "src": "431:91:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_AccessTime_$602_memory",
+                          "typeString": "struct POCAccessLogger.AccessTime memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_AccessTime_$602_memory",
+                          "typeString": "struct POCAccessLogger.AccessTime memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 618,
+                          "name": "accessLog",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 607,
+                          "src": "409:9:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_$",
+                            "typeString": "mapping(string memory => struct POCAccessLogger.AccessTime storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 620,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 619,
+                          "name": "_user",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 613,
+                          "src": "419:5:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "409:16:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage",
+                          "typeString": "struct POCAccessLogger.AccessTime storage ref[] storage ref"
+                        }
+                      },
+                      "id": 621,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "409:21:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_AccessTime_$602_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct POCAccessLogger.AccessTime storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 626,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "409:114:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 627,
+                  "nodeType": "ExpressionStatement",
+                  "src": "409:114:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 629,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "set",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 616,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 613,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 629,
+                  "src": "349:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 612,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "349:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 615,
+                  "name": "_accessTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 629,
+                  "src": "370:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 614,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "370:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "348:42:4"
+            },
+            "returnParameters": {
+              "id": 617,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "398:0:4"
+            },
+            "scope": 700,
+            "src": "336:232:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 678,
+              "nodeType": "Block",
+              "src": "648:237:4",
+              "statements": [
+                {
+                  "assignments": [
+                    640
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 640,
+                      "name": "accessTimes",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 678,
+                      "src": "659:25:4",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                        "typeString": "uint256[]"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "id": 638,
+                          "name": "uint",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "659:4:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 639,
+                        "length": null,
+                        "nodeType": "ArrayTypeName",
+                        "src": "659:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                          "typeString": "uint256[]"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 649,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 644,
+                            "name": "accessLog",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 607,
+                            "src": "698:9:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_$",
+                              "typeString": "mapping(string memory => struct POCAccessLogger.AccessTime storage ref[] storage ref)"
+                            }
+                          },
+                          "id": 646,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 645,
+                            "name": "_user",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 631,
+                            "src": "708:5:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "698:16:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage",
+                            "typeString": "struct POCAccessLogger.AccessTime storage ref[] storage ref"
+                          }
+                        },
+                        "id": 647,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "length",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "698:23:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 643,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "687:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_objectcreation_pure$_t_uint256_$returns$_t_array$_t_uint256_$dyn_memory_$",
+                        "typeString": "function (uint256) pure returns (uint256[] memory)"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "id": 641,
+                          "name": "uint",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "691:4:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 642,
+                        "length": null,
+                        "nodeType": "ArrayTypeName",
+                        "src": "691:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                          "typeString": "uint256[]"
+                        }
+                      }
+                    },
+                    "id": 648,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "687:35:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_memory",
+                      "typeString": "uint256[] memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "659:63:4"
+                },
+                {
+                  "body": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 673,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftHandSide": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 663,
+                          "name": "accessTimes",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 640,
+                          "src": "797:11:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                            "typeString": "uint256[] memory"
+                          }
+                        },
+                        "id": 665,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 664,
+                          "name": "i",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 651,
+                          "src": "809:1:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": true,
+                        "nodeType": "IndexAccess",
+                        "src": "797:14:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "Assignment",
+                      "operator": "=",
+                      "rightHandSide": {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "baseExpression": {
+                                  "argumentTypes": null,
+                                  "id": 666,
+                                  "name": "accessLog",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 607,
+                                  "src": "815:9:4",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_$",
+                                    "typeString": "mapping(string memory => struct POCAccessLogger.AccessTime storage ref[] storage ref)"
+                                  }
+                                },
+                                "id": 668,
+                                "indexExpression": {
+                                  "argumentTypes": null,
+                                  "id": 667,
+                                  "name": "_user",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 631,
+                                  "src": "825:5:4",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_string_memory_ptr",
+                                    "typeString": "string memory"
+                                  }
+                                },
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "nodeType": "IndexAccess",
+                                "src": "815:16:4",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage",
+                                  "typeString": "struct POCAccessLogger.AccessTime storage ref[] storage ref"
+                                }
+                              },
+                              "id": 670,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 669,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 651,
+                                "src": "832:1:4",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "815:19:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_AccessTime_$602_storage",
+                                "typeString": "struct POCAccessLogger.AccessTime storage ref"
+                              }
+                            },
+                            "id": 671,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "accessTime",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 601,
+                            "src": "815:30:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "id": 672,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "814:32:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "797:49:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 674,
+                    "nodeType": "ExpressionStatement",
+                    "src": "797:49:4"
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 659,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 654,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 651,
+                      "src": "751:1:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 655,
+                          "name": "accessLog",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 607,
+                          "src": "753:9:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_$",
+                            "typeString": "mapping(string memory => struct POCAccessLogger.AccessTime storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 657,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 656,
+                          "name": "_user",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 631,
+                          "src": "763:5:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "753:16:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage",
+                          "typeString": "struct POCAccessLogger.AccessTime storage ref[] storage ref"
+                        }
+                      },
+                      "id": 658,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "753:23:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "751:25:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 675,
+                  "initializationExpression": {
+                    "assignments": [
+                      651
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 651,
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 675,
+                        "src": "739:6:4",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 650,
+                          "name": "uint",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "739:4:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 653,
+                    "initialValue": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 652,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "748:1:4",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "739:10:4"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 661,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "778:3:4",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 660,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 651,
+                        "src": "778:1:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 662,
+                    "nodeType": "ExpressionStatement",
+                    "src": "778:3:4"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "735:111:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 676,
+                    "name": "accessTimes",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 640,
+                    "src": "866:11:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                      "typeString": "uint256[] memory"
+                    }
+                  },
+                  "functionReturnParameters": 636,
+                  "id": 677,
+                  "nodeType": "Return",
+                  "src": "859:18:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 679,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 632,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 631,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 679,
+                  "src": "592:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 630,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "592:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "591:21:4"
+            },
+            "returnParameters": {
+              "id": 636,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 635,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 679,
+                  "src": "634:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 633,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "634:4:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 634,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "634:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "633:15:4"
+            },
+            "scope": 700,
+            "src": "576:309:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 698,
+              "nodeType": "Block",
+              "src": "961:80:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 686,
+                          "name": "accessLog",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 607,
+                          "src": "979:9:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_$",
+                            "typeString": "mapping(string memory => struct POCAccessLogger.AccessTime storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 688,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 687,
+                          "name": "_user",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 681,
+                          "src": "989:5:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "979:16:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage",
+                          "typeString": "struct POCAccessLogger.AccessTime storage ref[] storage ref"
+                        }
+                      },
+                      "id": 695,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 694,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 689,
+                              "name": "accessLog",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 607,
+                              "src": "996:9:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_$",
+                                "typeString": "mapping(string memory => struct POCAccessLogger.AccessTime storage ref[] storage ref)"
+                              }
+                            },
+                            "id": 691,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "id": 690,
+                              "name": "_user",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 681,
+                              "src": "1006:5:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "996:16:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage",
+                              "typeString": "struct POCAccessLogger.AccessTime storage ref[] storage ref"
+                            }
+                          },
+                          "id": 692,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "length",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "996:23:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "-",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 693,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1020:1:4",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1_by_1",
+                            "typeString": "int_const 1"
+                          },
+                          "value": "1"
+                        },
+                        "src": "996:25:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "979:43:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_AccessTime_$602_storage",
+                        "typeString": "struct POCAccessLogger.AccessTime storage ref"
+                      }
+                    },
+                    "id": 696,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "accessTime",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 601,
+                    "src": "979:54:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 685,
+                  "id": 697,
+                  "nodeType": "Return",
+                  "src": "972:61:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 699,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLast",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 682,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 681,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 699,
+                  "src": "914:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 680,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "914:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "913:21:4"
+            },
+            "returnParameters": {
+              "id": 685,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 684,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 699,
+                  "src": "956:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 683,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "956:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "955:6:4"
+            },
+            "scope": 700,
+            "src": "897:144:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 701,
+        "src": "73:971:4"
+      }
+    ],
+    "src": "0:1045:4"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Stuff/Projects/Master/client/src/main/ui/contracts/POCAccessLogger.sol",
+    "exportedSymbols": {
+      "POCAccessLogger": [
+        700
+      ]
+    },
+    "id": 701,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 596,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:4"
+      },
+      {
+        "id": 597,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:33:4"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 700,
+        "linearizedBaseContracts": [
+          700
+        ],
+        "name": "POCAccessLogger",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "POCAccessLogger.AccessTime",
+            "id": 602,
+            "members": [
+              {
+                "constant": false,
+                "id": 599,
+                "name": "miningTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 602,
+                "src": "136:18:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 598,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "136:7:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 601,
+                "name": "accessTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 602,
+                "src": "165:18:4",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 600,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "165:7:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "AccessTime",
+            "nodeType": "StructDefinition",
+            "scope": 700,
+            "src": "107:84:4",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 607,
+            "name": "accessLog",
+            "nodeType": "VariableDeclaration",
+            "scope": 700,
+            "src": "203:41:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_$",
+              "typeString": "mapping(string => struct POCAccessLogger.AccessTime[])"
+            },
+            "typeName": {
+              "id": 606,
+              "keyType": {
+                "id": 603,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "211:6:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "203:31:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_$",
+                "typeString": "mapping(string => struct POCAccessLogger.AccessTime[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "contractScope": null,
+                  "id": 604,
+                  "name": "AccessTime",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 602,
+                  "src": "221:10:4",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_AccessTime_$602_storage_ptr",
+                    "typeString": "struct POCAccessLogger.AccessTime"
+                  }
+                },
+                "id": 605,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "221:12:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_ptr",
+                  "typeString": "struct POCAccessLogger.AccessTime[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 611,
+            "name": "accessLogCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 700,
+            "src": "289:38:4",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_uint256_$",
+              "typeString": "mapping(string => uint256)"
+            },
+            "typeName": {
+              "id": 610,
+              "keyType": {
+                "id": 608,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "297:6:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "289:23:4",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_uint256_$",
+                "typeString": "mapping(string => uint256)"
+              },
+              "valueType": {
+                "id": 609,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "307:4:4",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 628,
+              "nodeType": "Block",
+              "src": "398:170:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 623,
+                            "name": "now",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 717,
+                            "src": "469:3:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "id": 624,
+                            "name": "_accessTime",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 615,
+                            "src": "499:11:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 622,
+                          "name": "AccessTime",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 602,
+                          "src": "431:10:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_AccessTime_$602_storage_ptr_$",
+                            "typeString": "type(struct POCAccessLogger.AccessTime storage pointer)"
+                          }
+                        },
+                        "id": 625,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [
+                          "miningTime",
+                          "accessTime"
+                        ],
+                        "nodeType": "FunctionCall",
+                        "src": "431:91:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_AccessTime_$602_memory",
+                          "typeString": "struct POCAccessLogger.AccessTime memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_AccessTime_$602_memory",
+                          "typeString": "struct POCAccessLogger.AccessTime memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 618,
+                          "name": "accessLog",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 607,
+                          "src": "409:9:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_$",
+                            "typeString": "mapping(string memory => struct POCAccessLogger.AccessTime storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 620,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 619,
+                          "name": "_user",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 613,
+                          "src": "419:5:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "409:16:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage",
+                          "typeString": "struct POCAccessLogger.AccessTime storage ref[] storage ref"
+                        }
+                      },
+                      "id": 621,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "409:21:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_AccessTime_$602_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct POCAccessLogger.AccessTime storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 626,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "409:114:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 627,
+                  "nodeType": "ExpressionStatement",
+                  "src": "409:114:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 629,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "set",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 616,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 613,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 629,
+                  "src": "349:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 612,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "349:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 615,
+                  "name": "_accessTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 629,
+                  "src": "370:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 614,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "370:7:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "348:42:4"
+            },
+            "returnParameters": {
+              "id": 617,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "398:0:4"
+            },
+            "scope": 700,
+            "src": "336:232:4",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 678,
+              "nodeType": "Block",
+              "src": "648:237:4",
+              "statements": [
+                {
+                  "assignments": [
+                    640
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 640,
+                      "name": "accessTimes",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 678,
+                      "src": "659:25:4",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                        "typeString": "uint256[]"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "id": 638,
+                          "name": "uint",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "659:4:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 639,
+                        "length": null,
+                        "nodeType": "ArrayTypeName",
+                        "src": "659:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                          "typeString": "uint256[]"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 649,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 644,
+                            "name": "accessLog",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 607,
+                            "src": "698:9:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_$",
+                              "typeString": "mapping(string memory => struct POCAccessLogger.AccessTime storage ref[] storage ref)"
+                            }
+                          },
+                          "id": 646,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 645,
+                            "name": "_user",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 631,
+                            "src": "708:5:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "698:16:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage",
+                            "typeString": "struct POCAccessLogger.AccessTime storage ref[] storage ref"
+                          }
+                        },
+                        "id": 647,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "length",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "698:23:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 643,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "687:10:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_objectcreation_pure$_t_uint256_$returns$_t_array$_t_uint256_$dyn_memory_$",
+                        "typeString": "function (uint256) pure returns (uint256[] memory)"
+                      },
+                      "typeName": {
+                        "baseType": {
+                          "id": 641,
+                          "name": "uint",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "691:4:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 642,
+                        "length": null,
+                        "nodeType": "ArrayTypeName",
+                        "src": "691:6:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                          "typeString": "uint256[]"
+                        }
+                      }
+                    },
+                    "id": 648,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "687:35:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_memory",
+                      "typeString": "uint256[] memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "659:63:4"
+                },
+                {
+                  "body": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 673,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftHandSide": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 663,
+                          "name": "accessTimes",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 640,
+                          "src": "797:11:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                            "typeString": "uint256[] memory"
+                          }
+                        },
+                        "id": 665,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 664,
+                          "name": "i",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 651,
+                          "src": "809:1:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": true,
+                        "nodeType": "IndexAccess",
+                        "src": "797:14:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "Assignment",
+                      "operator": "=",
+                      "rightHandSide": {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "baseExpression": {
+                                  "argumentTypes": null,
+                                  "id": 666,
+                                  "name": "accessLog",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 607,
+                                  "src": "815:9:4",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_$",
+                                    "typeString": "mapping(string memory => struct POCAccessLogger.AccessTime storage ref[] storage ref)"
+                                  }
+                                },
+                                "id": 668,
+                                "indexExpression": {
+                                  "argumentTypes": null,
+                                  "id": 667,
+                                  "name": "_user",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 631,
+                                  "src": "825:5:4",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_string_memory_ptr",
+                                    "typeString": "string memory"
+                                  }
+                                },
+                                "isConstant": false,
+                                "isLValue": true,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "nodeType": "IndexAccess",
+                                "src": "815:16:4",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage",
+                                  "typeString": "struct POCAccessLogger.AccessTime storage ref[] storage ref"
+                                }
+                              },
+                              "id": 670,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 669,
+                                "name": "i",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 651,
+                                "src": "832:1:4",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "815:19:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_AccessTime_$602_storage",
+                                "typeString": "struct POCAccessLogger.AccessTime storage ref"
+                              }
+                            },
+                            "id": 671,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "accessTime",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 601,
+                            "src": "815:30:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "id": 672,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "814:32:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "src": "797:49:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 674,
+                    "nodeType": "ExpressionStatement",
+                    "src": "797:49:4"
+                  },
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 659,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 654,
+                      "name": "i",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 651,
+                      "src": "751:1:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 655,
+                          "name": "accessLog",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 607,
+                          "src": "753:9:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_$",
+                            "typeString": "mapping(string memory => struct POCAccessLogger.AccessTime storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 657,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 656,
+                          "name": "_user",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 631,
+                          "src": "763:5:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "753:16:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage",
+                          "typeString": "struct POCAccessLogger.AccessTime storage ref[] storage ref"
+                        }
+                      },
+                      "id": 658,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "length",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "753:23:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "751:25:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 675,
+                  "initializationExpression": {
+                    "assignments": [
+                      651
+                    ],
+                    "declarations": [
+                      {
+                        "constant": false,
+                        "id": 651,
+                        "name": "i",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 675,
+                        "src": "739:6:4",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "typeName": {
+                          "id": 650,
+                          "name": "uint",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "739:4:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "value": null,
+                        "visibility": "internal"
+                      }
+                    ],
+                    "id": 653,
+                    "initialValue": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 652,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "748:1:4",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "nodeType": "VariableDeclarationStatement",
+                    "src": "739:10:4"
+                  },
+                  "loopExpression": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "id": 661,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "++",
+                      "prefix": false,
+                      "src": "778:3:4",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "id": 660,
+                        "name": "i",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 651,
+                        "src": "778:1:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 662,
+                    "nodeType": "ExpressionStatement",
+                    "src": "778:3:4"
+                  },
+                  "nodeType": "ForStatement",
+                  "src": "735:111:4"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 676,
+                    "name": "accessTimes",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 640,
+                    "src": "866:11:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                      "typeString": "uint256[] memory"
+                    }
+                  },
+                  "functionReturnParameters": 636,
+                  "id": 677,
+                  "nodeType": "Return",
+                  "src": "859:18:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 679,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAll",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 632,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 631,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 679,
+                  "src": "592:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 630,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "592:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "591:21:4"
+            },
+            "returnParameters": {
+              "id": 636,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 635,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 679,
+                  "src": "634:13:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 633,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "634:4:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 634,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "634:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "633:15:4"
+            },
+            "scope": 700,
+            "src": "576:309:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 698,
+              "nodeType": "Block",
+              "src": "961:80:4",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 686,
+                          "name": "accessLog",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 607,
+                          "src": "979:9:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_$",
+                            "typeString": "mapping(string memory => struct POCAccessLogger.AccessTime storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 688,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 687,
+                          "name": "_user",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 681,
+                          "src": "989:5:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "979:16:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage",
+                          "typeString": "struct POCAccessLogger.AccessTime storage ref[] storage ref"
+                        }
+                      },
+                      "id": 695,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 694,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "baseExpression": {
+                              "argumentTypes": null,
+                              "id": 689,
+                              "name": "accessLog",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 607,
+                              "src": "996:9:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage_$",
+                                "typeString": "mapping(string memory => struct POCAccessLogger.AccessTime storage ref[] storage ref)"
+                              }
+                            },
+                            "id": 691,
+                            "indexExpression": {
+                              "argumentTypes": null,
+                              "id": 690,
+                              "name": "_user",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 681,
+                              "src": "1006:5:4",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            },
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "IndexAccess",
+                            "src": "996:16:4",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_array$_t_struct$_AccessTime_$602_storage_$dyn_storage",
+                              "typeString": "struct POCAccessLogger.AccessTime storage ref[] storage ref"
+                            }
+                          },
+                          "id": 692,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "length",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "996:23:4",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "-",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "31",
+                          "id": 693,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "1020:1:4",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_1_by_1",
+                            "typeString": "int_const 1"
+                          },
+                          "value": "1"
+                        },
+                        "src": "996:25:4",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "979:43:4",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_AccessTime_$602_storage",
+                        "typeString": "struct POCAccessLogger.AccessTime storage ref"
+                      }
+                    },
+                    "id": 696,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "accessTime",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 601,
+                    "src": "979:54:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 685,
+                  "id": 697,
+                  "nodeType": "Return",
+                  "src": "972:61:4"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 699,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLast",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 682,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 681,
+                  "name": "_user",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 699,
+                  "src": "914:19:4",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 680,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "914:6:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "913:21:4"
+            },
+            "returnParameters": {
+              "id": 685,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 684,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 699,
+                  "src": "956:4:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 683,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "956:4:4",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "955:6:4"
+            },
+            "scope": 700,
+            "src": "897:144:4",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 701,
+        "src": "73:971:4"
+      }
+    ],
+    "src": "0:1045:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.1+commit.c8a2cb62.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-02-04T16:10:26.172Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
