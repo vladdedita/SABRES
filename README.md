@@ -1,19 +1,19 @@
-#SABRES - Secure Auditing using Blockchain Technology
+# SABRES - Secure Auditing using Blockchain Technology
 
 In order to run the solution the following steps should be followed:
 
-##Proxy
+## Proxy
 
 The proxy is configured externally using the project's *application.properties* located in *proxy/src/main/resources*
 As the configurations are self-explanatory, one should go over every configuration and replace the values.
 After finishing the configuration, the project can be built and compiled (*mvn clean install*) and ran as a java jar.
 
-##Signature application
+## Signature application
 
 The backend of the signature application should be configured in the same way as the proxy. The location of the configuration file is
 *signature application/src/main/resources*. After this, the project should be built and compiled (*mvn clean install*) and ran as a java jar.
 
-##Blockchain
+## Blockchain
 
 Before running the proxy and the signature application you should have a public or development blockchain available.
 
