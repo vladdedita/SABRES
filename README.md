@@ -1,4 +1,4 @@
-# SABRES - Secure Auditing using Blockchain Technology
+# SABRES - Secure Auditing using Blockchain for Remote Electronic Signature
 
 In order to run the solution the following steps should be followed:
 
