@@ -1,5 +1,11 @@
 # SABRES - Secure Auditing using Blockchain for Remote Electronic Signature
 
+
+##Architecture
+SABRES is designed to be compliant with CEN and ETSI standards for QTSPs. The overall achitecture is presented in the figure below.
+![alt text](./docs/sabres_architecture.png)
+
+
 In order to run the solution the following steps should be followed:
 
 ## Proxy
